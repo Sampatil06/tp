@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Library Landing Page</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Custom CSS for additional styling */
+        body {
+            background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
+        }
+        .hero {
+            background-image: url('/static/assets/library-background4.jpg');
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            padding: 100px 0;
+        }
+        .cta-button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+        li >  a{
+            font-size: 20px;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: green; 
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
+    <div class="container">
+        <p style="font-size: 20px; color:green">Digital_library</p>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Browse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <h1 class="display-4">Unlock a World of Knowledge</h1>
+        <p class="lead">Explore a vast collection of books in our digital library.</p>
+        <a href="/home" class="btn btn-primary btn-lg cta-button">Get Started</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-book fa-3x mb-3"></i>
+                    <h3>Extensive Collection</h3>
+                    <p>Access thousands of books in various genres.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-search fa-3x mb-3"></i>
+                    <h3>User-Friendly Interface</h3>
+                    <p>Easy navigation and search for your favorite books.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center">
+                    <i class="fas fa-laptop fa-3x mb-3"></i>
+                    <h3>Read Anywhere</h3>
+                    <p>Enjoy our library on any device, anytime, anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="bg-light py-5" style="background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="text-center">
+                    <h2>What Our Users Say</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                    <p>"I love My e-Library! It has made reading so convenient and enjoyable."</p>
+                    <cite>John Doe</cite>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                    <p>"An amazing collection of books. Highly recommended!"</p>
+                    <cite>Jane Smith</cite>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="text-center mb-4">
+                    <i class="fas fa-quote-left fa-2x"></i>
+                    <p>"I can't believe I have access to all these books. Thank you, e-Library!"</p>
+                    <cite>David Wilson</cite>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="text-center py-4">
+    <p>&copy; 2023 e-Library</p>
+</footer>
+
+<!-- Bootstrap JS and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Library - Home</title>
+    <!-- Add Bootstrap CSS link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        li >  a{
+            font-size: 20px;
+        }
+        .navbar-light .navbar-nav .nav-link {
+            color: green; 
+        }
+    </style>
+    <!-- Add custom CSS -->
+</head>
+<body style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
+    <div class="container">
+        <p style="font-size: 20px; color:green">Digital_library</p>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts">Contact Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/login">Signin</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1 class="display-4">Unlock a World of Knowledge</h1>
+                <p class="lead">Explore a vast collection of books in our digital library.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="/static/assets/library-background5.png" alt="Library" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Books Section -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Featured Books</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card book-card">
+                   <a href="/login"> <img src="/static/assets/Novels.jpeg" class="card-img-top" alt="Book 1" height="200px" width="200px"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card book-card">
+                   <a href="/login"> <img src="/static/assets/scifi.jpg" class="card-img-top" alt="Book 2" height="200px" width="200px"></a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card book-card" >
+                   <a href="/login"> <img src="/static/assets/bestsellers.jpeg" class="card-img-top" alt="Book 3" height="200px" width="200px"> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Search Bar Section -->
+<section class="bg-light py-5" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2>Find Your Next Read</h2>
+                <form class="search-form">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search for books...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary search-button" type="button">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Subscription Section -->
+<section class="newsletter py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Stay updated with the latest book releases and library news.</p>
+                <form class="subscribe-form">
+                    <div class="input-group">
+                        <input type="email" class="form-control" placeholder="Your Email">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary subscribe-button" type="button">Subscribe</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="text-center py-4">
+    <p>&copy; 2023 e-Library</p>
+</footer>
+
+<!-- Bootstrap JS and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
