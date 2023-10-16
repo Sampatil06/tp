@@ -1,0 +1,35 @@
+body {
+    background-image: linear-gradient(90deg,#a6a6a6,#ffffff)
+}
+.contact-container {
+    background-image: white;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+.contact-form label {
+    font-weight: bold;
+}
+.form-control {
+    border-radius: 0;
+}
+.submit-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+.submit-button:hover {
+    background-color: #0056b3;
+}
+li >  a{
+    font-size: 20px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: green; 
+}

@@ -1,36 +1,20 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <title>Book Recommender</title>
+    <title>Novels</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="/static/css/novels.css">
 </head>
-<style>
-    body{
-        background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
-    }
-    .text-white{
-        color:black
-    }
-    li{
-        position:relative;
-        left:175%
-    }
-    .nav_bar{
-        text-color: black
-    }
-    .navbar{
-        border:0
-    }
-</style>
-<body >
 
+<body >
+    
     <nav class="navbar" style="background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
-        <a class="navbar-brand" style="color:green; font-size:20px; padding-left:150px">Digital_library</a>
+        <a class="navbar-brand" style="color:green; font-size:20px; padding-left:150px;padding-top:12px;">Digital_library</a>
         <ul class="nav navbar-nav">
-            <li><a href="/" style="color:green; font-size:20px">Home</a></li>
-            <li><a href="#" style="color:green; font-size:20px">Browse</a></li>
+            <li><a href="/home2" style="color:green; font-size:20px">Home</a></li>
+            <li><a href="/recommend2" style="color:green; font-size:20px">Recommended</a></li>
             <li><a href="/about_us" style="color:green; font-size:20px">about us</a></li>
             <li><a href="/contacts" style="color:green; font-size:20px">Contact Us</a></li>
         </ul>
@@ -38,34 +22,126 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-white" style="font-size:35px">Novels</h1>
-                <form action="/recommend_books" method="post">
-                    <input name="user_input" type="text" class="form-control" placeholder="Enter Book Name"><br>
-                    <input type="submit" class="btn btn-lg btn-warning" >
-                </form>
+                <h2 class="text-white" style="font-size:35px">Novels</h2>
             </div>
-
-            
-
-             {% for i in mlist %}
-                <div class="col-md-3" style="margin-top:50px">
+            {% for a in book %}
+                <div class="col-md-3" style="margin-top:50px; padding-left:100px">
                     <div class="card">
-                        <div class="card-body">
-                            <img class="card-img-top" src="http://images.amazon.com/images/P/0195153448.01.MZZZZZZZ.jpg">
-                            <p class="text-white">Classical Mythology</p>
-                            <h4 class="text-white">Mark P. O. Morford</h4>
+
+                        <div class="card-body"  >
+                            <form method="POST">
+                                {% csrf_token %}
+                            <button value="{{a.Author_name}}" name="save"><img class="card-img-top" src="{{a.Book_img}}" height="175px" width="120px"></button>
+                                </form>
+                            <h4>{{a.Book_name}}</h4>
+                            <h4>{{a.Author_name}}</h4>
+                            <div>
+                            <button class="showPopupButton"  >Read</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-             {% endfor %}
-
-            
-
-
-
-
+            {% endfor %}
         </div>
+        <div class="popup-container" id="popupContainer1">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer1')">&times;</span>
+                                <embed src="/static/assets/Inferno.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer2">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer2')">&times;</span>
+                                <embed src="/static/assets/The_Lost_Symbol.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer3">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer3')">&times;</span>
+                                <embed src="/static/assets/The_Da_Vinci_Code.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer4">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer4')">&times;</span>
+                                <embed src="/static/assets/Angels&Demons.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer5">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer5')">&times;</span>
+                                <embed src="/static/assets/Great_Expectations.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer6">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer6')">&times;</span>
+                                <embed src="/static/assets/Oliver_Twist.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer7">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer7')">&times;</span>
+                                <embed src="/static/assets/A_Christmas_Carol.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer8">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer8')">&times;</span>
+                                <embed src="/static/assets/A_Tale_of_Two_Cities.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer9">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer9')">&times;</span>
+                                <embed src="/static/assets/Burmese_days.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer10">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer10')">&times;</span>
+                                <embed src="/static/assets/Nineteen_Eighty_Four.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer11">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer11')">&times;</span>
+                                <embed src="/static/assets/Collected_Essays.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer12">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer12')">&times;</span>
+                                <embed src="/static/assets/Animal_Farm.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer13">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer13')">&times;</span>
+                                <embed src="/static/assets/Ivanhoe.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer14">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer14')">&times;</span>
+                                <embed src="/static/assets/Redgauntlet.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer15">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer15')">&times;</span>
+                                <embed src="/static/assets/Robin_Hood.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
+        <div class="popup-container" id="popupContainer16">
+                                <div class="popup-box">
+                                <span class="popup-close" onclick="closePopup('popupContainer16')">&times;</span>
+                                <embed src="/static/assets/Lady_of_the_Lake.pdf#toolbar=0" type="application/pdf" width="100%" height="600px">
+                                </div>
+                            </div>
     </div>
+
+<script src="/static/js/novels.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,30 @@
+body {
+    background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
+}
+.hero {
+    background-image: url('/static/assets/library-background4.jpg');
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+}
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #0056b3;
+}
+li >  a{
+    font-size: 20px;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: green; 
+}

@@ -1,0 +1,47 @@
+body{
+    background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
+}
+.text-white{
+    color:black
+}
+li{
+    position:relative;
+    left:125%;
+}
+.nav_bar{
+    text-color: black
+}
+.navbar{
+    border:0
+}
+ .popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/* Styles for the popup boxes */
+.popup-box {
+    background-color:#cd8900;
+    padding: 20px;
+    border-radius: 5px;
+    width:70%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    position: relative;
+    color:Black;
+}
+
+/* Styles for the close button */
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;

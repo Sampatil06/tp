@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Library - Home</title>
+    <title>Home</title>
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
@@ -11,8 +11,136 @@
             font-size: 20px;
         }
         .navbar-light .navbar-nav .nav-link {
-            color: green; 
+            color: green;
         }
+	/* Custom CSS for the e-Library Homepage */
+
+/* Hero Section */
+.hero {
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 36px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+.cta-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+/* Featured Books Section */
+.book-card {
+    border: none;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.book-card img {
+    max-width: 100%;
+}
+
+/* Search Bar Section */
+.search-form {
+    margin-top: 20px;
+}
+
+.search-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Newsletter Subscription Section */
+.subscribe-form {
+    margin-top: 20px;
+}
+
+.subscribe-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+/* Navigation on Mobile Devices */
+@media (max-width: 768px) {
+    .navbar-light .navbar-nav .nav-link {
+        color: #333; /* Change text color on mobile devices */
+    }
+    .navbar-light .navbar-toggler-icon {
+        background-color: #333; /* Change hamburger icon color on mobile devices */
+    }
+    .navbar-light .navbar-brand {
+        font-size: 24px; /* Adjust brand logo size on mobile devices */
+    }
+}
+
+/* Container for Parallax Background */
+.parallax {
+    background-image: url('parallax.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    z-index: -1; /* Place it behind content */
+}
+
+/* Content inside the Parallax Container */
+.parallax-content {
+    text-align: center;
+    padding: 100px;
+    color: #fff;
+}
+
+/* Additional styling for text on mobile devices */
+@media (max-width: 768px) {
+    .parallax-content h1 {
+        font-size: 24px;
+    }
+    .parallax-content p {
+        font-size: 16px;
+    }
+}
+
+/* Responsive footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+/* Mobile-friendly spacing for sections */
+@media (max-width: 768px) {
+    section {
+        padding: 20px 0;
+    }
+}
+
     </style>
     <!-- Add custom CSS -->
 </head>
@@ -21,7 +149,7 @@
 <!-- Navigation -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
     <div class="container">
-        <p style="font-size: 20px; color:green">Digital_library</p>
+        <p style="font-size: 20px; color:green;padding-top:8px;">Digital_library</p>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
@@ -36,7 +164,7 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/login">Signin</a>
                 </li>
-                
+
             </ul>
         </div>
     </div>
@@ -119,11 +247,6 @@
         </div>
     </div>
 </section>
-
-<!-- Footer -->
-<footer class="text-center py-4">
-    <p>&copy; 2023 e-Library</p>
-</footer>
 
 <!-- Bootstrap JS and jQuery Scripts -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

@@ -3,56 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-Library Landing Page</title>
+    <title>Digital_Library</title>
     <!-- Add Bootstrap CSS link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Custom CSS for additional styling */
-        body {
-            background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
-        }
-        .hero {
-            background-image: url('/static/assets/library-background4.jpg');
-            background-size: cover;
-            color: #fff;
-            text-align: center;
-            padding: 100px 0;
-        }
-        .cta-button {
-            background-color: #007bff;
-            color: #fff;
-            padding: 15px 30px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-        }
-        .cta-button:hover {
-            background-color: #0056b3;
-        }
-        li >  a{
-            font-size: 20px;
-        }
-        .navbar-light .navbar-nav .nav-link {
-            color: green; 
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/landing_page.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
     <div class="container">
-        <p style="font-size: 20px; color:green">Digital_library</p>
+        <p style="font-size: 20px; color:green;padding-top:8px;">Digital_library</p>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="/home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Browse</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/about_us">About Us</a>
@@ -68,8 +33,8 @@
 <!-- Hero Section -->
 <section class="hero">
     <div class="container">
-        <h1 class="display-4">Unlock a World of Knowledge</h1>
-        <p class="lead">Explore a vast collection of books in our digital library.</p>
+        <h1 class="display-4" style="font-weight:bold">Unlock a World of Knowledge</h1>
+        <em class="lead" style="font-weight:bold">Explore a vast collection of books in our digital library.</em><br><br>
         <a href="/home" class="btn btn-primary btn-lg cta-button">Get Started</a>
     </div>
 </section>

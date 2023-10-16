@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Book Recommender</title>
+    <title>Search</title>
     <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
@@ -27,10 +27,9 @@
 <body >
 
     <nav class="navbar" style="background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
-        <a class="navbar-brand" style="color:green; font-size:20px; padding-left:150px">Digital_library</a>
+        <a class="navbar-brand" style="color:green; font-size:20px; padding-left:150px;padding-top:12px;">Digital_library</a>
         <ul class="nav navbar-nav">
-            <li><a href="/" style="color:green; font-size:20px">Home</a></li>
-            <li><a href="#" style="color:green; font-size:20px">Browse</a></li>
+            <li><a href="/home2" style="color:green; font-size:20px">Home</a></li>
             <li><a href="/about_us" style="color:green; font-size:20px">about us</a></li>
             <li><a href="/contacts" style="color:green; font-size:20px">Contact Us</a></li>
         </ul>
@@ -38,22 +37,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-white" style="font-size:35px">Recommend Books</h1>
-                <form action="/recommend_books" method="post">
+                <h1 class="text-white" style="font-size:35px">Search Books</h1>
+                <form  method="POST">
+                    {% csrf_token %}
                     <input name="user_input" type="text" class="form-control" placeholder="Enter Book Name"><br>
-                    <input type="submit" class="btn btn-lg btn-warning">
+                    <input type="submit" class="btn btn-lg btn-warning" >
                 </form>
             </div>
 
             
 
-             {% for i in mlist %}
+             {% for i in image %}
                 <div class="col-md-3" style="margin-top:50px">
                     <div class="card">
                         <div class="card-body">
-                            <img class="card-img-top" src="http://images.amazon.com/images/P/0195153448.01.MZZZZZZZ.jpg">
-                            <p class="text-white">Classical Mythology</p>
-                            <h4 class="text-white">Mark P. O. Morford</h4>
+                            <a href="#"> <img class="card-img-top" src="{{ i }}"> </a>
+
                         </div>
                     </div>
                 </div>

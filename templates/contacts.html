@@ -3,79 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - e-Library</title>
-    <!-- Add Bootstrap CSS link -->
+    <title>Contact Us</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        /* Custom CSS for additional styling */
-        body {
-            background-image: linear-gradient(90deg,#a6a6a6,#ffffff)
-        }
-        .contact-container {
-            background-image: white
-            border-radius: 5px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-        }
-        .contact-form label {
-            font-weight: bold;
-        }
-        .form-control {
-            border-radius: 0;
-        }
-        .submit-button {
-            background-color: #007bff;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            transition: background-color 0.3s ease;
-        }
-        .submit-button:hover {
-            background-color: #0056b3;
-        }
-        li >  a{
-            font-size: 20px;
-        }
-        .navbar-light .navbar-nav .nav-link {
-            color: green; 
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/contact.css">
 </head>
 <body>
+   <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(90deg,#a6a6a6,#ffffff)">
+    <a class="navbar-brand" href="#" style="padding-left:100px;color:green;">Digital_Library</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="padding-left:750px">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="/home2">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="browseDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Browse
+                </a>
+                <div class="dropdown-menu" aria-labelledby="browseDropdown">
+                    <a class="dropdown-item" href="/recommend">Search</a>
+                    <a class="dropdown-item" href="/recommend2">Recommended</a>
+                    <a class="dropdown-item" href="/index">Our Best Sellers</a>
+                    <a class="dropdown-item" href="/novels">Novels</a>
+                    <a class="dropdown-item" href="/maps">Near By Library</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/about_us">About Us</a>
+            </li>
+        </ul>
+    </div>
+</nav>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style=" background-image: linear-gradient(90deg,#a6a6a6,#ffffff);">
-        <div class="container">
-            <p style="font-size: 20px; color:green">Digital_library</p>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Browse</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/about_us">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contacts">Contact Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-<!-- Contact Form Section -->
 <section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3 contact-container">
                 <h2 class="text-center mb-4">Contact Us</h2>
-                <form class="contact-form">
+                <form class="contact-form" action="mailto:patilsamarth1947@gmail.com" method="get" enctype="text/plain">
                     <div class="form-group">
                         <label for="name">Name</label>
                         <input type="text" class="form-control" id="name" placeholder="Your Name" required>

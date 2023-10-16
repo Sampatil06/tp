@@ -1,0 +1,16 @@
+body{
+    background-image: linear-gradient(90deg,#a6a6a6,#ffffff);
+}
+.text-white{
+    color:black
+}
+li{
+    position:relative;
+    left:125%;
+}
+.nav_bar{
+    text-color: black
+}
+.navbar{
+    border:0
+}
