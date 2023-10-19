@@ -83,10 +83,10 @@ WSGI_APPLICATION = 'ip_project.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "d761cqs2z14zj4hc",
-        "USER": "h53xe41lujnopfbj",
-        "PASSWORD": "pqd12q6pim1q8pgb",
-        "HOST": "j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+        "NAME": "ip",
+        "USER": "sam2",
+        "PASSWORD": "samarth",
+        "HOST": "localhost",
         "PORT": "3306",
     }
 
