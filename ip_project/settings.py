@@ -17,9 +17,7 @@ import django_heroku
 import dj_database_url
 from decouple import config
 DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
-DATABASES['default'] = dj_database_url.config(
-    default='mysql://sam2:samarth@localhost:3306/ip',
-)
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -86,10 +84,10 @@ WSGI_APPLICATION = 'ip_project.wsgi.application'
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "ip",
-        "USER": "sam2",
-        "PASSWORD": "samarth",
-        "HOST": "127.0.0.1",
+        "NAME": "vz80csqto5jo91oa",
+        "USER": "zvhdvxq9y7gizv73",
+        "PASSWORD": "ycykcejist2o75je",
+        "HOST": "j21q532mu148i8ms.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
         "PORT": "3306",
     }
 
