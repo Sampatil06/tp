@@ -16,7 +16,7 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config
-DATABASES = {'default': dj_database_url.config(default=os.environ.get('DATABASE_URL'))}
+
 DATABASES['default'] = dj_database_url.config(
     default='mysql://sam2:samarth@localhost:3306/ip',
 )
